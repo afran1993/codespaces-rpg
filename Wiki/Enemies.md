@@ -1,3 +1,15 @@
+🛠️ Dettagli Tecnici per l'implementazione dei 1600 nemici
+
+Per supportare questa classe, ecco come dobbiamo gestire la complessità:
+
+    Level Scaling: In un formato verticale 16x100, la forza dei nemici deve crescere con la coordinata Y. Useremo una funzione logaritmica: Statistica=Base×(1+log(Y+1)).
+
+    Affinità Elementale: Ogni nemico eredita un metodo dall'elemento. Ad esempio, un nemico "Elite" di tipo Gravità potrebbe avere un'abilità passiva che dimezza la velocità di fuga del giocatore (cruciale per il controllo touch).
+
+    Memoria: Il EnemyManager non tiene in memoria i nemici sconfitti. Una volta che l'ID nemico muore o esce dal raggio visivo dello smartphone, l'oggetto viene rimosso dal Garbage Collector di Python.
+
+---
+
 import math
 
 class Enemy:

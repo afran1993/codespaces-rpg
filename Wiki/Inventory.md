@@ -1,3 +1,13 @@
+🛠️ Dettagli Tecnici per l'Inventario
+
+    Sinergia con MapSystem: Quando il giocatore tenta di muoversi in una delle 16 direzioni, il MapSystem interroga inventory.get_gravity_modifier(). Se il valore è alto (>1.5), il tiro del D20 subisce un malus pesante (es. -5 sul totale).
+
+    Ottimizzazione della Lista (UI Verticale): Con 1600 item potenziali, la classe implementa metodi di filtraggio rapido (sort_by_element). Questo permette alla UI dello smartphone di renderizzare solo piccoli gruppi di oggetti alla volta, evitando lag nello scorrimento.
+
+    Persistenza: Questa classe sarà il cuore del sistema di salvataggio. Ogni volta che viene modificata, genera un hash dello stato per garantire che il giocatore non possa "duplicare" item rari manipolando il peso.
+
+---
+
 class Inventory:
     """
     Gestore centralizzato per le 320 armi e i 1600 consumabili.

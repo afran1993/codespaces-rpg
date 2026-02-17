@@ -1,3 +1,14 @@
+🛠️ Dettagli Tecnici per le 320 Armi
+
+    Flyweight Pattern: Anche qui, i dati pesanti (descrizioni, icone, ID attacchi) risiedono in items_db.json. L'oggetto Weapon contiene solo lo stato attuale (durabilità, rune).
+
+    Sinergia Elementale: Se un'arma viene usata in un nodo della mappa con elemento Alchimia, la probabilità di riparazione critica aumenta del 20%.
+
+    Visualizzazione Verticale: La classe GearManager limita l'equipaggiamento attivo. In uno smartphone, mostrare 320 armi insieme è impossibile; il manager gestisce il caricamento a "scorrimento" (paging).
+
+
+---
+
 import math
 
 class Weapon:

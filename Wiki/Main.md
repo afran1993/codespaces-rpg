@@ -1,3 +1,13 @@
+🛠️ Analisi Tecnica dell'Integrazione
+
+    Dependency Injection: Nota come il DiceSystem viene passato a quasi tutte le classi. Questo garantisce che ogni calcolo di probabilità nel gioco segua la stessa identica logica D20, fondamentale per il bilanciamento di un RPG complesso.
+
+    Scalabilità dei Dati: Grazie ai vari Manager inizializzati qui, il gioco può gestire i 1600 nemici e 1600 item senza che main.py sappia cosa siano. Il main si occupa solo di "accendere le macchine".
+
+    UX Smartphone (Memory Management): Inizializzando tutto nel costruttore di una classe principale (VerticalRealmRPG), facilitiamo il salvataggio dello stato (Serialization). Se l'utente riceve una chiamata, possiamo salvare l'istanza game e chiudere l'app senza perdere i progressi nei 1600 nodi.
+
+---
+
 import sys
 from core.dice import DiceSystem
 from core.engine import GameEngine

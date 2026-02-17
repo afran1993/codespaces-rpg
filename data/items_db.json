@@ -1,0 +1,25 @@
+{
+  "item_0402": {
+    "metadata": {
+      "name": "Elisir della Piuma Alchemica",
+      "description": "Riduce temporaneamente l'effetto della gravità sull'inventario.",
+      "category": "Consumable"
+    },
+    "mechanics": {
+      "type": "utility",
+      "power": 0.0,
+      "weight": 0.2,
+      "element": "Alchemy",
+      "duration_turns": 10
+    },
+    "effects": {
+      "stat_modified": "gravity_influence",
+      "modifier_value": -0.5,
+      "is_stackable": false
+    },
+    "requirements": {
+      "min_level": 10,
+      "alchemy_skill_needed": 15
+    }
+  }
+}

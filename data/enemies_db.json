@@ -1,0 +1,32 @@
+{
+  "enemy_1599": {
+    "metadata": {
+      "name": "Custode dell'Eclissi Gravitazionale",
+      "rarity": "Legendary",
+      "flavor_text": "Un'entità antica che distorce lo spazio attorno a sé."
+    },
+    "stats": {
+      "base_level": 95,
+      "hp": 12500,
+      "mana": 4500,
+      "atk": 850,
+      "def": 600,
+      "speed_penalty": 1.2
+    },
+    "affinity": {
+      "primary_element": "Gravity",
+      "resistances": {"Gravity": 0.9, "Resonance": 0.2},
+      "weaknesses": {"Entropy": 1.5}
+    },
+    "logic": {
+      "ai_pattern": "Tactical_Aggressive",
+      "attack_ids": [1595, 1596, 1597, 1598, 1599],
+      "is_elite_eligible": true
+    },
+    "loot_table": {
+      "drop_chance_item_1600": 0.01,
+      "drop_chance_currency": 0.95,
+      "gold_min_max": [5000, 12000]
+    }
+  }
+}

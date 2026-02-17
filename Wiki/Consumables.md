@@ -1,3 +1,13 @@
+🛠️ Dettagli Tecnici per i 1600 Consumabili
+
+    Gestione del "Drop" (1600 tipologie): La probabilità di trovare uno specifico item tra i 1600 è gestita dal D20 di dice.py. Gli ID da 0-400 sono comuni (erbe), 401-1200 rari (pozioni alchemiche), 1201-1600 unici (oggetti di missione).
+
+    Sinergia con GravitySystem: Il valore restituito da calculate_gravity_penalty() viene passato direttamente alla logica di movimento. Se porti troppe "Chiavi di Ferro" (item pesanti), saltare tra i nodi della mappa diventa più difficile e richiede tiri di dado più alti.
+
+    UX Mobile (Drag & Drop): In un'interfaccia verticale, i consumabili dovrebbero essere accessibili tramite una "Quick-Bar" a scomparsa sul lato dello schermo. Uno swipe verso l'alto sull'icona dell'item lo "usa" istantaneamente, uno swipe verso il basso lo "scarta" per alleggerire il peso.
+
+---
+
 import math
 
 class Consumable:

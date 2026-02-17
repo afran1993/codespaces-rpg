@@ -1,3 +1,13 @@
+🛠️ Dettagli Tecnici per l'Unificazione
+
+    Ereditarietà Totale: Sia Enemy (in enemies.py) che il Player erediteranno da questa classe. Questo significa che se decidi di aggiungere una nuova statistica (es. "Resilienza alla Risonanza"), ti basterà aggiungerla qui per aggiornare istantaneamente tutte le 3200+ entità del gioco.
+
+    UX Mobile (Visual Feedback): Gli stati alterati (active_statuses) devono essere rappresentati graficamente con piccole icone circolari sopra l'entità. Essendo un gioco verticale, queste icone devono essere leggibili anche quando l'entità è vicina ai bordi.
+
+    Persistenza Cross-Node: Quando il giocatore si muove nel MapSystem, lo stato active_statuses dell'entità viene serializzato nel map_db.json. Se torni indietro dopo 2 turni, il nemico avrà ancora i debuff attivi, ma con la durata ridotta.
+    
+---
+
 import math
 
 class BaseEntity:

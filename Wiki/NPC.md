@@ -1,3 +1,15 @@
+🛠️ Dettagli Tecnici per i 1600 NPC
+
+    Sincronizzazione 16-Direzioni: Se il giocatore approccia un NPC da una direzione specifica (es. "Alle spalle"), il NPCManager può attivare un tiro di dado furtività per permettere un'azione di borseggio o un attacco a sorpresa.
+
+    Il sistema delle "1600 Verità": In un RPG complesso, ogni NPC possiede un frammento di informazione legato a uno dei 1600 luoghi. Questo crea un gameplay investigativo.
+
+    UX Mobile: Il sistema di dialogo utilizza un "Radial Menu" (menu radiale) sovrapposto all'NPC. Questo permette di scegliere tra "Parla", "Scambia", "Attacca" o "Quest" con un unico movimento circolare del pollice.
+
+
+---
+
+
 class NPC:
     """
     Rappresenta uno dei 1600 NPC del mondo.

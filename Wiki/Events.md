@@ -1,3 +1,16 @@
+🛠️ Dettagli Tecnici per la complessità degli Eventi
+
+Per gestire 1600 eventi senza scrivere 1600 if-else, useremo questo standard:
+
+    Event ID Mapping: Gli ID evento da 0 a 399 sono "Incontri", da 400 a 799 "Tesori", da 800 a 1199 "Lore/Dialoghi" e da 1200 a 1600 "Alterazioni Mappa".
+
+    Interazione con le 16 Direzioni: Se un giocatore arriva in un nodo da una direzione specifica (es. Nord-Nord-Est), l'evento può avere un bonus di "Sorpresa" che abbassa il DC del dado.
+
+    Stato Persistente: La classe dovrà interfacciarsi con un file di salvataggio per segnare quali dei 1600 eventi sono "One-Time" (unici) e quali sono ripetibili.
+
+
+---
+
 import random
 
 class EventManager:

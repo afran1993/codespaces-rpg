@@ -1,3 +1,13 @@
+🛠️ Dettagli Tecnici per l'Engine
+
+    State Machine: L'uso della variabile self.current_state è fondamentale per la UX mobile. Impedisce al giocatore di attaccare mentre si sta muovendo o di muoversi durante un dialogo, evitando conflitti di input touch.
+
+    Il Loop dei 1600: L'engine non "conosce" i nemici o gli item. Riceve solo ID e delega ai rispettivi Manager (EnemyManager, ItemFactory) il compito di caricare i dati. Questo mantiene l'Engine leggero e veloce.
+
+    UX Smartphone (Visualizza e Conferma): In un sistema a turni verticale, l'engine deve inviare alla UI i dati per i "Pop-up di conferma". Se il giocatore clicca su un attacco, l'engine risponde con il calcolo del danno potenziale e aspetta il secondo tap per confermare (prevenendo errori).
+    
+---
+
 class GameEngine:
     """
     Il 'Cervello' del gioco. Coordina il movimento, il combattimento 
